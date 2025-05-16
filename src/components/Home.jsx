@@ -147,12 +147,12 @@ const Home = () => {
       
       {/* Main content */}
       <div className={`z-10 w-full max-w-6xl px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h1 className="text-3xl md:text-4xl font-extrabold mb-12 text-center font-sans tracking-tight">
-          <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-white to-amber-200 animate-pulse-subtle">
-            SafeStack
+        <h1 className="text-xl md:text-4xl font-extrabold mb-12 text-center font-sans tracking-tight">
+          <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-white to-amber-300 animate-pulse-subtle">
+            What we
           </span>
-          <span className="inline-block ml-3 bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-white animate-pulse-subtle" style={{ animationDelay: '0.5s' }}>
-            Technologies
+          <span className="inline-block ml-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600 animate-pulse-subtle" style={{ animationDelay: '0.5s' }}>
+            Offer
           </span>
         </h1>
         
