@@ -127,12 +127,12 @@ const Footer = () => {
               <span className="bg-gradient-to-r from-blue-400 to-indigo-400 w-8 h-1 rounded-full"></span>
               <span>Get In Touch</span>
             </h3>
-            <ul className="space-y-6 w-full">
+            <ul className="space-y-2 w-full">
               <li className="group">
                 <a 
-                  href="tel:+254748800714"
-                  className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
-                >
+                    href="tel:+254748800714"
+                    className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
+                  >
                   <div className="relative">
                     <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
                       <Phone className="w-5 h-5 text-blue-400 group-hover:text-white" />
@@ -140,7 +140,6 @@ const Footer = () => {
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
                   <div className="text-center md:text-left">
-                    <div className="text-sm text-slate-400 mb-1">Phone</div>
                     <span className="text-white group-hover:text-blue-400 transition-colors font-medium">+254 748 800 714</span>
                   </div>
                 </a>
@@ -157,7 +156,6 @@ const Footer = () => {
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
                   <div className="text-center md:text-left">
-                    <div className="text-sm text-slate-400 mb-1">Email</div>
                     <span className="text-white group-hover:text-blue-400 transition-colors font-medium">info@safestack.com</span>
                   </div>
                 </a>
@@ -176,7 +174,6 @@ const Footer = () => {
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
                   <div className="text-center md:text-left">
-                    <div className="text-sm text-slate-400 mb-1">WhatsApp</div>
                     <span className="text-white group-hover:text-blue-400 transition-colors font-medium">Send a Message</span>
                   </div>
                 </a>
@@ -189,7 +186,6 @@ const Footer = () => {
                     </div>
                   </div>
                   <div className="text-center md:text-left">
-                    <div className="text-sm text-slate-400 mb-1">Location</div>
                     <span className="text-white font-medium">Nairobi, Kenya</span>
                   </div>
                 </div>
