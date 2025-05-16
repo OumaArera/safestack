@@ -113,25 +113,29 @@ const Header = () => {
         <nav className="p-5 space-y-4">
           {navItems.map((item) => (
             <div key={item.name} className="flex flex-col">
-              <button
-                onClick={() => {
-                  if (item.hasDropdown) {
-                    toggleDropdown(item.name);
-                  } else {
-                    setIsOpen(false);
-                  }
-                }}
-                className="flex justify-between items-center text-left w-full text-gray-800 dark:text-gray-100 font-medium hover:text-indigo-600"
-              >
-                <span>{item.name}</span>
-                {item.hasDropdown && (
+              {item.hasDropdown ? (
+                /* Items with dropdown */
+                <button
+                  onClick={() => toggleDropdown(item.name)}
+                  className="flex justify-between items-center text-left w-full text-gray-800 dark:text-gray-100 font-medium hover:text-indigo-600"
+                >
+                  <span>{item.name}</span>
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`}
                   />
-                )}
-              </button>
+                </button>
+              ) : (
+                /* Items without dropdown - FIX: Now this is an actual link */
+                <a
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="flex justify-between items-center text-left w-full text-gray-800 dark:text-gray-100 font-medium hover:text-indigo-600"
+                >
+                  <span>{item.name}</span>
+                </a>
+              )}
 
               {item.hasDropdown && activeDropdown === item.name && (
                 <div className="ml-4 mt-2 flex flex-col space-y-3">

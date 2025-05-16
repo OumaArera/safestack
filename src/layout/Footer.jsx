@@ -8,7 +8,6 @@ const Footer = () => {
   
   return (
     <footer className="relative text-white mt-20">
-      {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 -z-10"></div>
       
       {/* Abstract shapes */}
