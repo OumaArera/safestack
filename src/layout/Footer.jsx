@@ -29,17 +29,17 @@ const Footer = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
           {/* Company Info */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 flex flex-col items-center md:items-start">
             <div className="mb-8 flex items-center space-x-3 group">
               <div className="relative p-2 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r  opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img src={logo} alt="SafeStack Technologies Logo" className="h-10 w-auto relative z-10" />
               </div>
               <span className="text-2xl font-bold">
                 SafeStack <span className="font-light text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Technologies</span>
               </span>
             </div>
-            <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+            <p className="text-gray-300 mb-8 leading-relaxed text-lg text-center md:text-left">
               Delivering innovative solutions in software engineering, cybersecurity, and data science that transform how businesses operate in East Africa and beyond.
             </p>
             <div className="flex space-x-4 mb-8">
@@ -79,54 +79,29 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-            
-            {/* Newsletter subscription with improved styling (commented but designed) */}
-            {/* <div className="mt-8 p-6 rounded-2xl relative group overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-indigo-900/70 opacity-80 z-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 backdrop-blur-sm z-0"></div>
-              <div className="relative z-10">
-                <h4 className="text-xl font-semibold mb-3 text-white flex items-center">
-                  <span className="bg-gradient-to-r from-blue-400 to-indigo-400 w-8 h-1 rounded-full mr-3"></span>
-                  Stay Updated
-                </h4>
-                <p className="text-gray-300 mb-4">Get the latest tech insights right in your inbox</p>
-                <div className="flex flex-col space-y-3">
-                  <div className="relative">
-                    <input
-                      type="email"
-                      placeholder="Your email address"
-                      className="px-4 py-3 bg-slate-800/70 backdrop-blur-sm rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-slate-700 pl-10"
-                    />
-                    <Mail className="w-4 h-4 absolute left-3 top-3.5 text-slate-400" />
-                  </div>
-                  <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-xl py-3 text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/30 flex items-center justify-center group">
-                    Subscribe 
-                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </div>
-            </div> */}
           </div>
           
           {/* Spacer column for larger screens */}
           <div className="hidden lg:block lg:col-span-1"></div>
           
           {/* Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 flex flex-col items-center md:items-start">
             <h3 className="text-xl font-semibold mb-6 flex items-center space-x-3">
               <span className="bg-gradient-to-r from-blue-400 to-indigo-400 w-8 h-1 rounded-full"></span>
               <span>Quick Links</span>
             </h3>
-            <QuickLinks />
+            <div className="w-full flex justify-center md:justify-start">
+              <QuickLinks />
+            </div>
           </div>
           
           {/* Services */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 flex flex-col items-center md:items-start">
             <h3 className="text-xl font-semibold mb-6 flex items-center space-x-3">
               <span className="bg-gradient-to-r from-blue-400 to-indigo-400 w-8 h-1 rounded-full"></span>
               <span>Our Services</span>
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-center md:text-left">
               {[
                 { name: 'Software Engineering', path: '/services/software' },
                 { name: 'Cybersecurity', path: '/services/cybersecurity' },
@@ -137,7 +112,7 @@ const Footer = () => {
                 <li key={index} className="transform hover:-translate-x-1 transition-transform duration-300">
                   <a 
                     href={service.path} 
-                    className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group"
+                    className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group justify-center md:justify-start"
                   >
                     <div className="w-0 bg-blue-500 h-1 mr-0 rounded group-hover:w-4 group-hover:mr-2 transition-all duration-300"></div>
                     {service.name}
@@ -148,16 +123,16 @@ const Footer = () => {
           </div>
           
           {/* Contact Info */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 flex flex-col items-center md:items-start">
             <h3 className="text-xl font-semibold mb-6 flex items-center space-x-3">
               <span className="bg-gradient-to-r from-blue-400 to-indigo-400 w-8 h-1 rounded-full"></span>
               <span>Get In Touch</span>
             </h3>
-            <ul className="space-y-6">
+            <ul className="space-y-6 w-full">
               <li className="group">
                 <a 
                   href="tel:+254748800714"
-                  className="flex items-center space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
+                  className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
                 >
                   <div className="relative">
                     <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
@@ -165,7 +140,7 @@ const Footer = () => {
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
-                  <div>
+                  <div className="text-center md:text-left">
                     <div className="text-sm text-slate-400 mb-1">Phone</div>
                     <span className="text-white group-hover:text-blue-400 transition-colors font-medium">+254 748 800 714</span>
                   </div>
@@ -174,7 +149,7 @@ const Footer = () => {
               <li className="group">
                 <a 
                   href="mailto:info@safestack.com"
-                  className="flex items-center space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
+                  className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
                 >
                   <div className="relative">
                     <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
@@ -182,7 +157,7 @@ const Footer = () => {
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
-                  <div>
+                  <div className="text-center md:text-left">
                     <div className="text-sm text-slate-400 mb-1">Email</div>
                     <span className="text-white group-hover:text-blue-400 transition-colors font-medium">info@safestack.com</span>
                   </div>
@@ -193,7 +168,7 @@ const Footer = () => {
                   href="https://wa.me/254748800714"
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
+                  className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
                 >
                   <div className="relative">
                     <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
@@ -201,20 +176,20 @@ const Footer = () => {
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
-                  <div>
+                  <div className="text-center md:text-left">
                     <div className="text-sm text-slate-400 mb-1">WhatsApp</div>
                     <span className="text-white group-hover:text-blue-400 transition-colors font-medium">Send a Message</span>
                   </div>
                 </a>
               </li>
               <li className="group">
-                <div className="flex items-center space-x-4 p-3">
+                <div className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 p-3">
                   <div className="relative">
                     <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center">
                       <MapPin className="w-5 h-5 text-blue-400" />
                     </div>
                   </div>
-                  <div>
+                  <div className="text-center md:text-left">
                     <div className="text-sm text-slate-400 mb-1">Location</div>
                     <span className="text-white font-medium">Nairobi, Kenya</span>
                   </div>
@@ -229,14 +204,9 @@ const Footer = () => {
         
         {/* Copyright section */}
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <p className="text-slate-400 mb-4 md:mb-0">
+          <p className="text-slate-400 mb-4 md:mb-0 text-center">
             © {currentYear} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 font-medium">SafeStack Technologies</span>. All rights reserved.
           </p>
-          {/* <div className="flex space-x-6">
-            <a href="/privacy" className="text-slate-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
-            <a href="/terms" className="text-slate-400 hover:text-blue-400 transition-colors">Terms of Service</a>
-            <a href="/cookies" className="text-slate-400 hover:text-blue-400 transition-colors">Cookies Policy</a>
-          </div> */}
         </div>
       </div>
 
