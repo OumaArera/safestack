@@ -127,15 +127,15 @@ const Footer = () => {
               <span className="bg-gradient-to-r from-blue-400 to-indigo-400 w-8 h-1 rounded-full"></span>
               <span>Get In Touch</span>
             </h3>
-            <ul className="space-y-2 w-full">
+            <ul className="space-y-1 md:space-y-2 w-full">
               <li className="group">
                 <a 
                     href="tel:+254748800714"
-                    className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
+                    className="flex flex-col md:flex-row items-center md:items-start space-y-1 md:space-y-0 md:space-x-3 hover:bg-slate-800/50 p-2 md:p-3 rounded-xl transition-all duration-300"
                   >
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
-                      <Phone className="w-5 h-5 text-blue-400 group-hover:text-white" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
+                      <Phone className="w-4 h-4 md:w-5 md:h-5 text-blue-400 group-hover:text-white" />
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
@@ -147,11 +147,11 @@ const Footer = () => {
               <li className="group">
                 <a 
                   href="mailto:info@safestack.com"
-                  className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
+                  className="flex flex-col md:flex-row items-center md:items-start space-y-1 md:space-y-0 md:space-x-4 hover:bg-slate-800/50 p-2 md:p-3 rounded-xl transition-all duration-300"
                 >
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
-                      <Mail className="w-5 h-5 text-blue-400 group-hover:text-white" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
+                      <Mail className="w-4 h-4 md:w-5 md:h-5 text-blue-400 group-hover:text-white" />
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
@@ -165,24 +165,24 @@ const Footer = () => {
                   href="https://wa.me/254748800714"
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 hover:bg-slate-800/50 p-3 rounded-xl transition-all duration-300"
+                  className="flex flex-col md:flex-row items-center md:items-start space-y-1 md:space-y-0 md:space-x-4 hover:bg-slate-800/50 p-2 md:p-3 rounded-xl transition-all duration-300"
                 >
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
-                      <Send className="w-5 h-5 text-blue-400 group-hover:text-white" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300">
+                      <Send className="w-4 h-4 md:w-5 md:h-5 text-blue-400 group-hover:text-white" />
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-slate-800 rounded-full border-2 border-blue-500 hidden group-hover:flex"></div>
                   </div>
                   <div className="text-center md:text-left">
-                    <span className="text-white group-hover:text-blue-400 transition-colors font-medium">Send a Message</span>
+                    <span className="text-white group-hover:text-blue-400 transition-colors font-medium">WhatsApp</span>
                   </div>
                 </a>
               </li>
               <li className="group">
-                <div className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4 p-3">
+                <div className="flex flex-col md:flex-row items-center md:items-start space-y-1 md:space-y-0 md:space-x-4 p-2 md:p-3">
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center">
-                      <MapPin className="w-5 h-5 text-blue-400" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-slate-800/80 backdrop-blur-sm flex items-center justify-center">
+                      <MapPin className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
                     </div>
                   </div>
                   <div className="text-center md:text-left">
