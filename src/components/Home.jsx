@@ -152,7 +152,7 @@ const Home = () => {
             SafeStack
           </span>
           <span className="inline-block ml-3 bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-white animate-pulse-subtle" style={{ animationDelay: '0.5s' }}>
-            Innovation
+            Technologies
           </span>
         </h1>
         
