@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logo from '/src/assets/logo.png';
 import { navItems } from '../data/navigationData';
@@ -6,6 +6,7 @@ import { navItems } from '../data/navigationData';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const dropdownRefs = useRef({});
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -16,22 +17,34 @@ const Header = () => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
+  // Create refs for each dropdown menu item
+  useEffect(() => {
+    navItems.forEach(item => {
+      if (item.hasDropdown) {
+        dropdownRefs.current[item.name] = React.createRef();
+      }
+    });
+  }, []);
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-blue-50 dark:bg-gray-900 shadow-md py-3 transition-all duration-300">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="z-10">
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center text-center">
               <div className="flex items-center space-x-2">
                 <img src={logo} alt="SafeStack Logo" className="h-10 w-auto" />
                 <span className="text-xl md:text-3xl font-bold text-white">
                   SafeStack <span className="font-light">Technologies</span>
                 </span>
               </div>
-              <span className="text-sm text-blue-500 font-medium">Innovative. Secure. Relentless.</span>
+              <span className="text-sm text-blue-500 font-medium mt-1">
+                Innovative. Secure. Relentless.
+              </span>
             </div>
           </a>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
@@ -39,8 +52,8 @@ const Header = () => {
               <div
                 key={item.name}
                 className="relative"
+                ref={item.hasDropdown ? dropdownRefs.current[item.name] : null}
                 onMouseEnter={() => item.hasDropdown ? setActiveDropdown(item.name) : null}
-                onMouseLeave={() => setActiveDropdown(null)}
               >
                 <a
                   href={item.href}
@@ -51,7 +64,10 @@ const Header = () => {
                 </a>
 
                 {item.hasDropdown && activeDropdown === item.name && (
-                  <div className="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                  <div 
+                    className="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
                     {item.dropdownItems.map((dropdownItem) => (
                       <a
                         key={dropdownItem.name}

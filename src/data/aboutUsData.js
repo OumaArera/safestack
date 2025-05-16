@@ -6,7 +6,7 @@ export const teamMembers = [
     name: "John Ouma",
     role: "Software Engineer & Cybersecurity Specialist",
     bio: "John is a versatile software engineer and cybersecurity specialist with a strong background in building secure, scalable applications. He drives the architecture and development of key systems, ensuring both innovation and resilience across our platforms.",
-    image: "/src/assets/me.jpg"
+    image: "/src/assets/arera.png"
   },
   {
     name: "Elisha Onyando",

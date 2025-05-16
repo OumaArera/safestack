@@ -1,6 +1,7 @@
 import { Shield, Code, Database, Palette, Presentation } from 'lucide-react';
 
 export const navItems = [
+  { name: 'Home', href: '/' },
   {
     name: 'Services',
     href: '#services',
@@ -13,7 +14,7 @@ export const navItems = [
       { name: 'IT Consulting & Advisory', href: '/services/it-consulting', icon: Presentation }
     ]
   },
-  { name: 'About Us', href: '/about' },
+  { name: 'About Us', href: '/about-us' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Insights', href: '/insights' },
   // { name: 'Contact', href: '/contact' },

@@ -1,7 +1,7 @@
 export const services = [
   {
     title: 'Software Development',
-    route: '/services/software-development',
+    route: '/services/software',
     details: [
       'Custom Web Development (e.g., eCommerce platforms, CMS solutions)',
       'Mobile App Development (Native & Cross-Platform)',
@@ -27,7 +27,7 @@ export const services = [
   },
   {
     title: 'Data & AI Solutions',
-    route: '/services/data-ai',
+    route: '/services/data-science',
     details: [
       'Business Intelligence Dashboards & Analytics Solutions',
       'Data Warehousing & Engineering Pipelines',
