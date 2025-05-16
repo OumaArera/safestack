@@ -1,4 +1,6 @@
 import { Users, Briefcase, Award, ChevronRight, Heart } from "lucide-react";
+import john from '../assets/arera.png';
+import elisha from '../assets/onyando_photo.png';
 
 
 export const teamMembers = [
@@ -6,13 +8,13 @@ export const teamMembers = [
     name: "John Ouma",
     role: "Software Engineer & Cybersecurity Specialist",
     bio: "John is a versatile software engineer and cybersecurity specialist with a strong background in building secure, scalable applications. He drives the architecture and development of key systems, ensuring both innovation and resilience across our platforms.",
-    image: "/src/assets/arera.png"
+    image: john
   },
   {
     name: "Elisha Onyando",
     role: "Software Engineer, QA & Cybersecurity Specialist",
     bio: "Elisha contributes extensively across software engineering, quality assurance, and cybersecurity. He plays a pivotal role in maintaining code quality, enhancing system security, and ensuring our solutions meet the highest standards of performance and reliability.",
-    image: "/src/assets/onyando_photo.png"
+    image: elisha
   }
 ];
   
