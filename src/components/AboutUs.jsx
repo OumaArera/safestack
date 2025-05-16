@@ -30,7 +30,7 @@ export default function AboutUs() {
   }, [activeTab]);
 
   return (
-    <div className="relative -top-3 bg-slate-50">
+    <div className="relative -top-28 bg-slate-50">
       {/* Hero Section with Animated Background */}
       <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 text-white py-32">
         {/* Animated background elements */}
